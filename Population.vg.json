@@ -1,0 +1,144 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+    "vconcat": [
+        {
+            "transform": [{"filter": {"param": "select_area_interact"}}],
+            "title": {"text": "Population in different age groups", "dy": -15},
+            "width": 380,
+            "height": 250,
+            "data": {
+                "url": "Population.CSV",
+                "format": {"type": "csv"}
+            },
+            "layer": [
+                {
+                    "mark": "bar",
+                    "encoding": {
+                        "y": {"field": "Age_Groups", "type": "ordinal", "title": "Age Groups"},
+                        "x": {"aggregate": "sum", "field": "Population", "type": "quantitative", "title": "Population by Gender"},
+                        "color": {"field": "Gender", "legend": null},
+                        "tooltip": [
+                            {"field": "Gender", "type": "nominal", "title": "Gender"},
+                            {"field": "Age_Groups", "type": "ordinal", "title": "Age Groups"},
+                            {"aggregate": "sum", "field": "Population", "type": "quantitative", "title": "population", "format": ","}
+                        ]
+                    }
+                },
+                {
+                    "mark": {"type": "text", "opacity": 0.8, "color": "black", "fontSize": 9, "dx": 18},
+                    "encoding": {
+                        "x": {
+                            "aggregate": "sum",
+                            "field": "Population",
+                            "stack": "center",
+                            "bandPosition": 0.5
+                        },
+                        "y": {"field": "Age_Groups"},
+                        "text": {
+                            "aggregate": "sum", "field": "Population",
+                            "title": "Population",
+                            "format": ","
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "width": 380,
+            "height": 300,
+            "data": {
+                "url": "https://raw.githubusercontent.com/ZeyuLinn/Week9Homework/refs/heads/main/js/ne_10m_admin_1_states_provinces.topojson",
+                "format": {"type": "topojson", "feature": "ne_10m_admin_1_states_provinces"}
+            },
+            "projection": {"type": "equirectangular"},
+            "title": {"text": ["Population of Australia in 2021 Census"], "dy": -15},
+            "layer": [
+                {
+                    "data": {
+                        "url": "https://raw.githubusercontent.com/ZeyuLinn/Week9Homework/refs/heads/main/js/ne_10m_admin_1_states_provinces.topojson",
+                        "format": {"type": "topojson", "feature": "ne_10m_admin_1_states_provinces"}
+                    },
+                    "transform": [
+                        {"calculate": "'Data is not available in ' + datum.properties.name", "as": "note"}
+                    ],
+                    "mark": {
+                        "type": "geoshape",
+                        "fill": "#ddd",
+                        "stroke": "white",
+                        "strokeWidth": 1.5
+                    },
+                    "encoding": {"tooltip": {"field": "note"}}
+                },
+                {
+                    "transform": [
+                        {
+                            "lookup": "properties.name",
+                            "from": {
+                                "data": {"url": "Population_State.CSV", "format": {"type": "csv"}},
+                                "key": "State",
+                                "fields": ["Area","State", "Males", "Females", "Total"]
+                            }
+                        },
+                        {
+                            "calculate": "datum.Total/datum.Area",
+                            "as": "Population Indensity"
+                        }
+                    ],
+                    "mark": {"type": "geoshape", "stroke": "#fff", "strokeWidth": 0.5, "cursor": "pointer"},
+                    "params": [{"name": "select_area", "select": {"type": "point", "fields": ["Population Indensity"]}}],
+                    "encoding": {
+                        "fillOpacity": {
+                            "condition": {"param": "select_area", "value": 1},
+                            "value": 0.2
+                        },
+                        "color": {
+                            "title": ["Population per", "sqare kilometers"],
+                            "field": "Population Indensity",
+                            "type": "quantitative",
+                            "scale": {
+                                "type": "threshold",
+                                "domain": [2, 5, 10],
+                                "range": ["#f8ce78", "#fa9d4f", "#f05c4d", "#b71d3e"]
+                            },
+                            "legend": {"format": ".0f"}
+                        },
+                        "tooltip": [
+                            {"field": "State", "type": "nominal", "title": "State"},
+                            {"field": "Area", "type": "nominal", "title": "Area"},
+                            {"field": "Total", "type": "quantitative", "title": "Total Population", "format": ","},
+                            {"field": "Population Indensity", "type": "quantitative", "title": "Population Indensity", "format": ".2f"}
+                        ]
+                    }
+                },
+                {
+                    "data": {"url": "Population_State.CSV", "format": {"type": "csv"}},
+                    "mark": {"type": "geoshape", "stroke": "#fff", "strokeWidth": 0.5},
+                    "transform": [
+                        {
+                            "lookup": "State",
+                            "from": {
+                                "data": {
+                                    "url": "https://raw.githubusercontent.com/ZeyuLinn/Week9Homework/refs/heads/main/js/ne_10m_admin_1_states_provinces.topojson",
+                                    "format": {"type": "topojson", "feature": "ne_10m_admin_1_states_provinces"}
+                                },
+                                "key": "properties.name"
+                            },
+                            "as": "geo"
+                        }
+                    ],
+                    "params": [{"name": "select_area_interact", "select": {"type": "point", "fields": ["State"]}}]
+                }
+            ]
+        }
+    ],
+    "config": {
+        "style": {
+            "cell": {
+                "stroke": "transparent"
+            }
+        },
+        "font": "Arial",
+        "title": {"fontSize": 17}
+    }
+}
