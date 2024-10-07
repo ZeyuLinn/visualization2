@@ -8,7 +8,7 @@
             "width": 380,
             "height": 250,
             "data": {
-                "url": "Population.CSV",
+                "url": "https://raw.githubusercontent.com/ZeyuLinn/visualization2/refs/heads/main/Population.CSV",
                 "format": {"type": "csv"}
             },
             "layer": [
@@ -48,7 +48,7 @@
             "width": 380,
             "height": 300,
             "data": {
-                "url": "https://raw.githubusercontent.com/ZeyuLinn/Week9Homework/refs/heads/main/js/ne_10m_admin_1_states_provinces.topojson",
+                "url": "https://raw.githubusercontent.com/ZeyuLinn/visualization2/refs/heads/main/ne_10m_admin_1_states_provinces.topojson",
                 "format": {"type": "topojson", "feature": "ne_10m_admin_1_states_provinces"}
             },
             "projection": {"type": "equirectangular"},
@@ -56,7 +56,7 @@
             "layer": [
                 {
                     "data": {
-                        "url": "https://raw.githubusercontent.com/ZeyuLinn/Week9Homework/refs/heads/main/js/ne_10m_admin_1_states_provinces.topojson",
+                        "url": "https://raw.githubusercontent.com/ZeyuLinn/visualization2/refs/heads/main/ne_10m_admin_1_states_provinces.topojson",
                         "format": {"type": "topojson", "feature": "ne_10m_admin_1_states_provinces"}
                     },
                     "transform": [
@@ -75,7 +75,7 @@
                         {
                             "lookup": "properties.name",
                             "from": {
-                                "data": {"url": "Population_State.CSV", "format": {"type": "csv"}},
+                                "data": {"url": "https://raw.githubusercontent.com/ZeyuLinn/visualization2/refs/heads/main/Population_State.CSV", "format": {"type": "csv"}},
                                 "key": "State",
                                 "fields": ["Area","State", "Males", "Females", "Total"]
                             }
@@ -112,14 +112,14 @@
                     }
                 },
                 {
-                    "data": {"url": "Population_State.CSV", "format": {"type": "csv"}},
+                    "data": {"url": "https://raw.githubusercontent.com/ZeyuLinn/visualization2/refs/heads/main/Population_State.CSV", "format": {"type": "csv"}},
                     "mark": {"type": "geoshape", "stroke": "#fff", "strokeWidth": 0.5},
                     "transform": [
                         {
                             "lookup": "State",
                             "from": {
                                 "data": {
-                                    "url": "https://raw.githubusercontent.com/ZeyuLinn/Week9Homework/refs/heads/main/js/ne_10m_admin_1_states_provinces.topojson",
+                                    "url": "https://raw.githubusercontent.com/ZeyuLinn/visualization2/refs/heads/main/ne_10m_admin_1_states_provinces.topojson",
                                     "format": {"type": "topojson", "feature": "ne_10m_admin_1_states_provinces"}
                                 },
                                 "key": "properties.name"
