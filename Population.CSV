@@ -1,0 +1,177 @@
+State,Age_Groups,Population,Gender
+New South Wales,0-4 years,240712,Male
+New South Wales,05-14 years,514881,Male
+New South Wales,15-19 years,236148,Male
+New South Wales,20-24 years,254808,Male
+New South Wales,25-34 years,564183,Male
+New South Wales,35-44 years,544184,Male
+New South Wales,45-54 years,497158,Male
+New South Wales,55-64 years,468679,Male
+New South Wales,65-74 years,381017,Male
+New South Wales,75-84 years,211315,Male
+New South Wales,85 years and over,71074,Male
+New South Wales,0-4 years,227347,Female
+New South Wales,05-14 years,487069,Female
+New South Wales,15-19 years,221749,Female
+New South Wales,20-24 years,241374,Female
+New South Wales,25-34 years,577842,Female
+New South Wales,35-44 years,558980,Female
+New South Wales,45-54 years,519788,Female
+New South Wales,55-64 years,493100,Female
+New South Wales,65-74 years,407711,Female
+New South Wales,75-84 years,240207,Female
+New South Wales,85 years and over,112820,Female
+Victoria,0-4 years,192679,Male
+Victoria,05-14 years,407989,Male
+Victoria,15-19 years,186517,Male
+Victoria,20-24 years,210533,Male
+Victoria,25-34 years,483005,Male
+Victoria,35-44 years,452707,Male
+Victoria,45-54 years,402329,Male
+Victoria,55-64 years,361238,Male
+Victoria,65-74 years,289036,Male
+Victoria,75-84 years,159926,Male
+Victoria,85 years and over,55017,Male
+Victoria,0-4 years,183222,Female
+Victoria,05-14 years,385564,Female
+Victoria,15-19 years,176690,Female
+Victoria,20-24 years,199803,Female
+Victoria,25-34 years,492492,Female
+Victoria,35-44 years,466025,Female
+Victoria,45-54 years,424557,Female
+Victoria,55-64 years,385315,Female
+Victoria,65-74 years,316522,Female
+Victoria,75-84 years,184873,Female
+Victoria,85 years and over,87455,Female
+Queensland,0-4 years,150708,Male
+Queensland,05-14 years,345336,Male
+Queensland,15-19 years,160521,Male
+Queensland,20-24 years,162887,Male
+Queensland,25-34 years,344067,Male
+Queensland,35-44 years,334387,Male
+Queensland,45-54 years,328847,Male
+Queensland,55-64 years,299154,Male
+Queensland,65-74 years,245407,Male
+Queensland,75-84 years,131066,Male
+Queensland,85 years and over,38018,Male
+Queensland,0-4 years,141746,Female
+Queensland,05-14 years,326530,Female
+Queensland,15-19 years,152988,Female
+Queensland,20-24 years,160852,Female
+Queensland,25-34 years,357651,Female
+Queensland,35-44 years,353426,Female
+Queensland,45-54 years,345286,Female
+Queensland,55-64 years,316136,Female
+Queensland,65-74 years,258059,Female
+Queensland,75-84 years,143929,Female
+Queensland,85 years and over,59126,Female
+Western Australia,0-4 years,83249,Male
+Western Australia,05-14 years,176755,Male
+Western Australia,15-19 years,78685,Male
+Western Australia,20-24 years,81122,Male
+Western Australia,25-34 years,183972,Male
+Western Australia,35-44 years,188720,Male
+Western Australia,45-54 years,173750,Male
+Western Australia,55-64 years,154609,Male
+Western Australia,65-74 years,120271,Male
+Western Australia,75-84 years,62085,Male
+Western Australia,85 years and over,19644,Male
+Western Australia,0-4 years,78503,Female
+Western Australia,05-14 years,167277,Female
+Western Australia,15-19 years,74580,Female
+Western Australia,20-24 years,77702,Female
+Western Australia,25-34 years,188385,Female
+Western Australia,35-44 years,190766,Female
+Western Australia,45-54 years,174505,Female
+Western Australia,55-64 years,158832,Female
+Western Australia,65-74 years,127110,Female
+Western Australia,75-84 years,69042,Female
+Western Australia,85 years and over,30459,Female
+South Australia,0-4 years,48352,Male
+South Australia,05-14 years,107220,Male
+South Australia,15-19 years,51114,Male
+South Australia,20-24 years,56156,Male
+South Australia,25-34 years,117670,Male
+South Australia,35-44 years,111877,Male
+South Australia,45-54 years,111029,Male
+South Australia,55-64 years,110759,Male
+South Australia,65-74 years,94257,Male
+South Australia,75-84 years,51928,Male
+South Australia,85 years and over,18220,Male
+South Australia,0-4 years,45872,Female
+South Australia,05-14 years,101691,Female
+South Australia,15-19 years,48041,Female
+South Australia,20-24 years,53018,Female
+South Australia,25-34 years,117619,Female
+South Australia,35-44 years,114778,Female
+South Australia,45-54 years,113611,Female
+South Australia,55-64 years,116382,Female
+South Australia,65-74 years,102082,Female
+South Australia,75-84 years,60725,Female
+South Australia,85 years and over,29101,Female
+Tasmania,0-4 years,14520,Male
+Tasmania,05-14 years,32998,Male
+Tasmania,15-19 years,15523,Male
+Tasmania,20-24 years,15806,Male
+Tasmania,25-34 years,38367,Male
+Tasmania,35-44 years,31893,Male
+Tasmania,45-54 years,33340,Male
+Tasmania,55-64 years,36370,Male
+Tasmania,65-74 years,32657,Male
+Tasmania,75-84 years,17239,Male
+Tasmania,85 years and over,5062,Male
+Tasmania,0-4 years,13756,Female
+Tasmania,05-14 years,31362,Female
+Tasmania,15-19 years,14544,Female
+Tasmania,20-24 years,15216,Female
+Tasmania,25-34 years,38291,Female
+Tasmania,35-44 years,34058,Female
+Tasmania,45-54 years,35868,Female
+Tasmania,55-64 years,39020,Female
+Tasmania,65-74 years,34338,Female
+Tasmania,75-84 years,19414,Female
+Tasmania,85 years and over,7928,Female
+Northern Territory,0-4 years,8445,Male
+Northern Territory,05-14 years,16787,Male
+Northern Territory,15-19 years,7320,Male
+Northern Territory,20-24 years,8321,Male
+Northern Territory,25-34 years,20934,Male
+Northern Territory,35-44 years,17661,Male
+Northern Territory,45-54 years,15049,Male
+Northern Territory,55-64 years,12298,Male
+Northern Territory,65-74 years,7569,Male
+Northern Territory,75-84 years,2644,Male
+Northern Territory,85 years and over,499,Male
+Northern Territory,0-4 years,7774,Female
+Northern Territory,05-14 years,15893,Female
+Northern Territory,15-19 years,6857,Female
+Northern Territory,20-24 years,7473,Female
+Northern Territory,25-34 years,21958,Female
+Northern Territory,35-44 years,18155,Female
+Northern Territory,45-54 years,14923,Female
+Northern Territory,55-64 years,11933,Female
+Northern Territory,65-74 years,6933,Female
+Northern Territory,75-84 years,2513,Female
+Northern Territory,85 years and over,665,Female
+Australian Capital Territory,0-4 years,13746,Male
+Australian Capital Territory,05-14 years,29005,Male
+Australian Capital Territory,15-19 years,13386,Male
+Australian Capital Territory,20-24 years,17042,Male
+Australian Capital Territory,25-34 years,38637,Male
+Australian Capital Territory,35-44 years,34275,Male
+Australian Capital Territory,45-54 years,27785,Male
+Australian Capital Territory,55-64 years,21866,Male
+Australian Capital Territory,65-74 years,16625,Male
+Australian Capital Territory,75-84 years,8781,Male
+Australian Capital Territory,85 years and over,2868,Male
+Australian Capital Territory,0-4 years,12907,Female
+Australian Capital Territory,05-14 years,27230,Female
+Australian Capital Territory,15-19 years,12899,Female
+Australian Capital Territory,20-24 years,17132,Female
+Australian Capital Territory,25-34 years,38992,Female
+Australian Capital Territory,35-44 years,35006,Female
+Australian Capital Territory,45-54 years,28342,Female
+Australian Capital Territory,55-64 years,23462,Female
+Australian Capital Territory,65-74 years,19022,Female
+Australian Capital Territory,75-84 years,10556,Female
+Australian Capital Territory,85 years and over,4315,Female
