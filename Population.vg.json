@@ -5,8 +5,8 @@
         {
             "transform": [{"filter": {"param": "select_area_interact"}}],
             "title": {"text": "Population in different age groups", "dy": -15},
-            "width": 380,
-            "height": 250,
+            "width": 250,
+            "height": 200,
             "data": {
                 "url": "https://raw.githubusercontent.com/ZeyuLinn/visualization2/refs/heads/main/Population.CSV",
                 "format": {"type": "csv"}
@@ -45,8 +45,8 @@
             ]
         },
         {
-            "width": 380,
-            "height": 300,
+            "width": 250,
+            "height": 250,
             "data": {
                 "url": "https://raw.githubusercontent.com/ZeyuLinn/visualization2/refs/heads/main/ne_10m_admin_1_states_provinces.topojson",
                 "format": {"type": "topojson", "feature": "ne_10m_admin_1_states_provinces"}
