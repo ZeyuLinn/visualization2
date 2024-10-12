@@ -1,0 +1,116 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.1.0.json",
+    "vconcat": [
+        {
+            "title": {"text": ["Top 10 Countries(exclude Australia) of Birth", "of residents in Australia in 2021 census"], "dy": -15},
+            "width": 250,
+            "height": 250,
+            "data": {"url": "https://raw.githubusercontent.com/ZeyuLinn/visualization2/refs/heads/main/Top10_Countries_of_Birth.csv"},
+            "encoding": {
+                "x": {
+                    "field": "Country",
+                    "type": "nominal",
+                    "axis": {"labelAngle": -45}
+                },
+                "y": {
+                    "field": "Population",
+                    "type": "quantitative"
+                }
+            },
+            "layer": [
+                {
+                    "params": [
+                        {
+                            "name": "select_country",
+                            "select": {"type": "point", "fields": ["Country"]}
+                        }
+                    ],
+                    "mark": {
+                        "type": "bar"
+                    },
+                    "encoding": {
+                        "fillOpacity": {
+                            "condition": {"param": "select_country", "value": 1},
+                            "value": 0.2
+                        },
+                        "color": {
+                            "field": "Country",
+                            "scale": {
+                                "range": [
+                                    "#FF0000",
+                                    "#4e79a7",
+                                    "#5aa24f",
+                                    "#f28e2b",
+                                    "#c9c776",
+                                    "#FF7F7F",
+                                    "#8ad6d0",
+                                    "#8452bd",
+                                    "#9c755f",
+                                    "#bea3d5"
+                                ]
+                            }
+                        },
+                        "tooltip": [
+                            {"field": "Country", "type": "nominal"},
+                            {"field": "Population", "type": "quantitative", "format": ","}
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "title": {"text": ["The population of arrival of residents", "by year in Australia between 1951 to 2021"], "dy": -15},
+            "width": 250,
+            "height": 250,
+            "encoding": {
+                "x": {
+                    "field": "ArrivalYear",
+                    "type": "nominal",
+                    "axis": {"labelAngle": -45},
+                    "sort": [
+                        "before 1951",
+                        "1951-1960",
+                        "1961-1970",
+                        "1971-1980",
+                        "1981-1990",
+                        "1991-2000",
+                        "2001-2010",
+                        "2011-2021"
+                    ]
+                },
+                "y": {"field": "Population", "type": "quantitative"},
+                "color": {"field": "Country"},
+                "tooltip": [
+                    {"field": "Country", "type": "nominal"},
+                    {"field": "ArrivalYear", "type": "ordinal"},
+                    {"field": "Population", "type": "quantitative", "format": ","}
+                ]
+            },
+            "layer": [
+                {
+                    "data": {
+                        "url": "https://raw.githubusercontent.com/ZeyuLinn/visualization2/refs/heads/main/COB_by_ArrivalYear.csv",
+                        "format": {"type": "csv"}
+                    },
+                    "mark": {
+                        "type": "line",
+                        "tooltip": true,
+                        "point": {"filled": true}
+                    },
+                    "transform": [
+                        {"filter": {"param": "select_country"}}
+                    ]
+                }
+            ]
+        }
+    ],
+    "config": {
+        "style": {
+            "cell": {
+                "stroke": "transparent"
+            }
+        },
+        "font": "Arial",
+        "title": {"fontSize": 15}
+    }
+}
