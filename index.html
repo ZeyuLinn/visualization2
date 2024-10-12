@@ -46,9 +46,29 @@
             <div class = "pure-u-1-2">
                 <div class="description description-left">
                     <h2>Population Statistic</h2>
-                    <p>In the 2021 Census(The lastest published data) in Australia. There are 25417345 residents live in Australia. 
+                    <p>
+                        In the 2021 Census(The lastest published data) in Australia. There are 25417345 residents live in Australia. 
                         Male and Female shows a almost balance, with female is slightly higher than male. 
-                        All states' situation are similar to this trend. The bar chart on the right represents the...(unfinished)
+                    </p>
+                    <p>
+                        All states' situation are similar to this trend. The stacke bar chart on the right represents the population across 
+                        different age groups by ganders. We can easily see that, the age group of 25-34 years occupies the most population, which 
+                        is 3624065. 
+                    </p>
+                    <p>
+                        To interact with the graph, we can select the gender in any age group to visualizes that gender only, and double 
+                        click anywhere around the graph to reset the filter condition.
+                    </p>
+                    <br>
+                    <p>
+                        This map visualizes the population situation by all states in Australia. The color shows the population density
+                        (Population per sqare kilometers) of the specific area. We can see that the top 3 areas are: Australian 
+                        Capital Territory, New South Wales and Victoria. Most population focuses on the north-east of Australia. 
+                    </p>
+                    <p>
+                        By clicking 
+                        on the area of any state, the map will highlight the selected state. At the same time, the stacked bar chart on the above 
+                        will show the statistic of this state. To reset the filter, double click any where around the ground.
                     </p>
                 </div>
                 
@@ -60,6 +80,52 @@
         </div>
         <!-- end pure grid group-->
 
+        <!-- pure grid group-->
+        <div class = "pure-g">
+            <div class = "pure-u-1-2">
+                <div id="vis2" class="vis-container"></div>
+            </div>
+
+            <div class = "pure-u-1-2">
+                <div class="description-right">
+                    <h2>Nationality Statistic</h2>
+                    <p>
+                        Australia is a country contains multiple culture and oversea residents. This part will visualize the composition of 
+                        the population of Australia. 
+                    </p>
+                    <p>
+                        The bar chart on the left shows the top 10 population countries of birth of residents in 
+                        2021 census. England, India and China are the top 3 countries, which have the population of 927490, 673352 and 549618 
+                        respectively. 
+                    </p>
+                    <p>
+                        We can do the same interaction to this bar chart as the previous one, which clicking a bar to select and highlight 
+                        a country, and that country will be used as the filter for the line graph below.
+                    </p>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <p>
+                        Since we have known the top 10 Population countries of birth of residents in 2021 census. Now let's discover some trends 
+                        of the arrival year of these 10 countries. 
+                    </p>
+                    <p>
+                        This line graph shows the arrival year of the 10 countries in different year period. It shares the same colors for countries 
+                        with the bar chart above. According to this graph, we can see that there are more and more residents from India in recent 20 years. 
+                        China shares the same trend. For England, it has a peak value in the period of 1961-1970, and the arrivals decreased after that.
+                    </p>
+                    <p>
+                        This graph can share the same filter with the bar chart above. When select a country above, we can see the same country in this 
+                        graph only, in order to analyse it more easily.
+                    </p>
+                </div>
+            </div>
+        </div>
+
     </div>
 
 
@@ -67,7 +133,9 @@
 
     <script type="text/javascript">
     var specVis1 = "https://raw.githubusercontent.com/ZeyuLinn/visualization2/refs/heads/main/Population.vg.json";
-
+    var specVis2 = "https://raw.githubusercontent.com/ZeyuLinn/visualization2/refs/heads/main/Nationality.vg.json";
+    
     vegaEmbed('#vis1', specVis1, { "actions": false });
+    vegaEmbed('#vis2', specVis2, { "actions": false });
     </script>
 </body>
